@@ -211,11 +211,11 @@ Or, run this from the root of the repo:
 
 #### Docker environment for integration tests
 
-Due to the polyglot nature of the [jsii](https://github.com/aws/jsii) tools used by cdk8s, 
-the toolchain requirements are somewhat more complicated than for most projects.  To 
+Due to the polyglot nature of the [jsii](https://github.com/aws/jsii) tools used by cdk8s,
+the toolchain requirements are somewhat more complicated than for most projects.  To
 help with this, you can use the `jsii/superchain` docker image that includes all the required tools.
 
-In order to get an interactive shell within a superchain container you can use the 
+In order to get an interactive shell within a superchain container you can use the
 following command.
 
 ```console
@@ -231,7 +231,7 @@ $ yarn run package
 $ yarn integ:update
 ```
 
-> Note: this may leave some files owned as the docker root user id.  These will need to 
+> Note: this may leave some files owned as the docker root user id.  These will need to
   be cleaned up manually.
 
 ### Pull Requests
@@ -278,6 +278,29 @@ $ mkdocs serve
 This will serve a local web server with the website.
 
 > A good reference for syntax and capabilities is the [mkdocs-material](https://squidfunk.github.io/mkdocs-material) website.
+
+## DCO (Developer Certificate of Origin)
+
+In accordance to the CNCF [IP Policy](https://github.com/cncf/foundation/blob/master/charter.md#11-ip-policy), every commit to this repostiry must be signed-off according to the DCO terms.
+
+To sign-off your commit, add the following line at the end of your commit message:
+
+```console
+Signed-off-by: Joe Smith <joe@gmail.com>
+```
+
+You can automatically add this by using `git commit -s`.
+
+By doing so, you are certifying that the contribution in question was either authored by you, or
+you were given explicit permission to pass it as open-source content.
+
+> Exact certificate can be found [here](https://developercertificate.org/).
+
+### Validation
+
+Every PR is automatically validated for DCO sign-off by using the [dco](https://github.com/apps/dco) GitHub App.
+
+If your PR fails the DCO check, you'll need to amend the commit history to include the sign-off. The best approach is to squash all commits, but you can also amend every individual commit if you like.
 
 ## Examples
 
